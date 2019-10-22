@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>McDonalds Performance</title>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/series-label.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    </head>
+    <body>
+        <h1>McDonalds Performance and the Effects of the Impossible Burger</h1>
+        <h2>Introduction</h2>
+        As opposed to intuition, I will be offering insight into data-driven decisions for the benefit of the company. This breakdown will address the following:
+        <ul>
+        <li>The overall effect of the addition of the Impossible Burger</li>
+        <li>The regional effect of the addition of the Impossible Burger</li>
+        <li>Analysis on microtrends in daily sales</li>
+        </ul>
+        <h2>Overall Effect of the Impossible Burger:</h2>
+        <p>The Impossible Burger offers an interesting prospect to consumers, especially given the current cultural climate shifting towards a greener future. With the rise of electric vehicles, reusable straws, recycling, company campaigns focusing on a greener methodology (be that for the purpose of PR or not), the Impossible Burger appeals to that growing audience.</p>
+        <p>With all of these considerations, I would first like to pose the question: does the Impossible Burger appeal to the customers that would eat a regular beef/chicken/fish McDonalds burger, or does it appeal to a completely different group as a whole?</p>
+        <p>The chart below shows the volume of sales by unit, broken down between the Chicken Fillet, Fish Fillet, and Hamburger between April 2018 - April 2019. This date range centers around the introduction of the Impossible Burger (October 2018). The month of October is indicated by the black circle.</p>
+        <div id="container1" style="width:100%; height:400px;"></div>
+        <script src="sales_by_type.js"></script>
+        <p>Upon first glance, it is obvious to note that when the Impossible Burger was introducted, there was a slight dip for the month of October. However how significantly it affected the amount of sales after October ended (the indidual dip during the month could be explained by the excitement of the introduction of a new product) is hard to tell from the visualization. Analyzing the numbers, we can see:</p>
+        <table style="width:75%">
+          <tr>
+            <th></th>
+            <th>Chicken Fillet</th>
+            <th>Fish Fillet</th>
+            <th>Hamburger</th>
+          </tr>
+          <tr>
+            <th>Average Units Sold Apr(2018)-Sep(2018)</th>
+            <td>3352227</td>
+            <td>2005952</td>
+            <td>7959858</td>
+          </tr>
+          <tr>
+            <th>Average Units Sold Nov(2018)-April(2019)</th>
+            <td>3032179</td>
+            <td>1826964</td>
+            <td>7307561</td>
+          </tr>
+          <tr>
+            <th>Differences</th>
+            <td>320048</td>
+            <td>178988</td>
+            <td>652297</td>
+          </tr>
+          <tr>
+            <th>Percent Decrease</th>
+            <td>9.55%</td>
+            <td>8.92%</td>
+            <td>8.19%</td>
+          </tr>
+        </table>
+        <p>The average number of each sandwich type sold before the introduction of the Impossible Burger was significantly higher than the average number of each sandwich type sold after the introduction. The Hamburger took the biggest raw hit (652297), the Chicken Fillet being second (320048), and the Fish Fillet taking the least (178988). However percentage wise, the Chicken Fillet saw the biggest decrease (9.55%), the Fish Fillet being second (8.92%), and the Hamburger seeing the least (8.19%).</p>
+        <p>Assuming no other external factors took place in October, 2018 that could've affected sales. We can see that the introduction had a large impact on sandwich sales.</p>
+
+        <h2>Regional Effects of the Impossible Burger</h2>
+        <p>As far as the overall effect of the introduction of the Impossible Burger, we have deemed that the difference before and after October, 2018 (from Apr 2017 - Apr 2018) is significant. To take this to the next level, we will be shifting the scope of our data to the five regions (Northeast, Southwest, Northwest, Southeast, and Central).</p>
+        <div id="container2" style="width:100%; height:400px;"></div>
+        <script src="sales_by_region.js"></script>
+        <p>We can see from this chart that the regions are all relatively close, there is no single region that dominates totally over others. The decrease after october can again be seen in this chart. The question now is whether or not some regions saw a substantial difference with specific types of sandwiches before and after october. The table below shows the percentage differences between Apr-Sep and Nov-Apr:</p>
+        <table style="width:75%">
+          <tr>
+            <th></th>
+            <th>Northeast</th>
+            <th>Southwest</th>
+            <th>Northwest</th>
+            <th>Southeast</th>
+            <th>Central</th>
+          </tr>
+          <tr>
+            <th>Hamburger</th>
+            <td>7.67%</td>
+            <td>8.42%</td>
+            <td>10.54%</td>
+            <td>9.26%</td>
+            <td>8.82%</td>
+          </tr>
+          <tr>
+            <th>Chicken Fillet</th>
+            <td>12.83%</td>
+            <td>8.39%</td>
+            <td>11.28%</td>
+            <td>10.02%</td>
+            <td>10.28%</td>
+          </tr>
+          <tr>
+            <th>Fish Fillet</th>
+            <td>10.77%</td>
+            <td>8.54%</td>
+            <td>9.92%</td>
+            <td>8.61%</td>
+            <td>9.68%</td>
+          </tr>
+        </table>
+        <p>We can see that the most significant change was the Chicken Fillet in the Northeast region (12.84%), with both the Chicken Fillet and Hamburger in the Northwest being a close second (11.28%) and third (10.54%), respectively.</p>
+        <p>We can now prioritize certain regions and their sandwiches depending on which took more significant losses than others. This can lead to more optimized marketing strategies, or more optimal division of inventory.</p>
+
+        <h2>Analysis on Microtrends in Daily Sales</h2>
+        <p>The first metric that should be conducted on the given daily data is the general performance per day, which is shown below:</p>
+        <div id="container3" style="width:100%; height:400px;"></div>
+        <script src="microtrends.js"></script>
+        <p>From what the data shows, all of the individual day sales are relatively similar (range: 1.3%). To further this study, the next scope to isolate would be region or sandwich type. We have seen from the historical data that the regions are also relatively evenly spread; therefore, by sandwich type could have potential to possess interesting data, as shown below:</p>
+
+        <div id="container4" style="width:100%; height:400px;"></div>
+        <script src="microtrends_.js"></script>
+
+        <p>This reveals to us that sandwich sales tend to be relatively uniform across each day. An interesting observation to note: on friday, the most popular day of the week, Hamburgers and Chicken Fillet sandwiches have their lowest percentage popularity(58.6% and 24.4%, respectively) while in turn the Fish Fillet has its highest percentage popularity(17.0%).</p>
+
+        <h2>Conclusion</h2>
+
+        <p>From what the data shows, we can confidently say that there was a significant decrease in sandwich sales on October, 2018. This decrease ended up shallowing out, however still yielded a net-decrease from pre-October, 2018. We can also note that a few sandwich-region combinations showed more difference in sales than others, with the largest difference being the Hamburger in the Northeast at 7.67% and the Chicken Fillet in the Northeast at 12.83%. Daily metrics showed that day-to-day sales are more stable than the month-to-month, with a notable point being the distribution of Fish Fillet sales on Friday (the peak day of the week).
+
+    </body>
+</html>
